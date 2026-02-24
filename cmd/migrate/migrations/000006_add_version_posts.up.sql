@@ -1,0 +1,4 @@
+ALTER TABLE
+  posts
+ADD
+  COLUMN version int DEFAULT 0;
