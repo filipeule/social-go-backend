@@ -8,7 +8,7 @@ SOCIAL GO é um backend completo para uma rede social, onde usuários podem post
 
 Este projeto irá abranger uma ampla gama de conceitos e melhores práticas de backend:
 
-- **Paginação**: Implementação de paginação para listas de posts e comentários.
+- **Paginação**: Implementação de paginação, filtros e ordenação para listas de posts e comentários.
 - **Documentação**: Documentação completa da API.
 - **Logging Estruturado**: Sistema de logging estruturado para monitoramento e depuração.
 - **Autenticação e Autorização**: Sistema seguro de login e controle de acesso.
