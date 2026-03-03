@@ -211,8 +211,8 @@ func generateComments(num int, users []*store.User, posts []*store.Post) []*stor
 	cms := make([]*store.Comment, num)
 	for i := range num {
 		cms[i] = &store.Comment{
-			PostID: posts[rand.Intn(len(posts))].ID,
-			UserID: users[rand.Intn(len(users))].ID,
+			PostID:  posts[rand.Intn(len(posts))].ID,
+			UserID:  users[rand.Intn(len(users))].ID,
 			Content: comments[rand.Intn(len(comments))],
 		}
 	}

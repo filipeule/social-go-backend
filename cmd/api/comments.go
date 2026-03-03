@@ -28,8 +28,8 @@ func (app *application) createComment(w http.ResponseWriter, r *http.Request) {
 	}
 
 	comment := &store.Comment{
-		PostID: post.ID,
-		UserID: post.UserID,
+		PostID:  post.ID,
+		UserID:  post.UserID,
 		Content: commentPayload.Content,
 	}
 

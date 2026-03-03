@@ -63,7 +63,7 @@ func (s *CommentStore) Create(ctx context.Context, comment *Comment) error {
 		values ($1, $2, $3)
 		returning id, created_at
 	`
-	
+
 	ctx, cancel := context.WithTimeout(ctx, QueryTimeoutDuration)
 	defer cancel()
 

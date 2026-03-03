@@ -9,8 +9,8 @@ SOCIAL GO é um backend completo para uma rede social, onde usuários podem post
 Este projeto irá abranger uma ampla gama de conceitos e melhores práticas de backend:
 
 - **Paginação**: Implementação de paginação, filtros e ordenação para listas de posts e comentários.
-- **Documentação**: Documentação completa da API.
-- **Logging Estruturado**: Sistema de logging estruturado para monitoramento e depuração.
+- **Documentação**: Documentação automática completa da API.
+- **Logging Estruturado**: Sistema de logging estruturado para monitoramento e debugging.
 - **Autenticação e Autorização**: Sistema seguro de login e controle de acesso.
 - **Caching**: Implementação de cache para melhorar performance.
 - **Testes**: Conjunto abrangente de testes automatizados.
@@ -21,12 +21,14 @@ Este projeto irá abranger uma ampla gama de conceitos e melhores práticas de b
 - **CI/CD**: Automação de integração e entrega contínua.
 - **Controle de Concorrência Otimista (OCC)**: Para gerenciar conflitos de atualização.
 - **Abstração de Banco de Dados**: Uso de interfaces para abstração e flexibilidade no armazenamento de dados.
+- **Deploy em Produção**: Deploy automatizado via containers, compatível com qualquer ambiente de nuvem.
 
 ## Tecnologias Utilizadas
 
 - **Go**: Linguagem principal para o backend.
 - **PostgreSQL**: Banco de dados relacional com migrações.
 - **Go Migrate**: Para executar migrações de banco de dados.
+- **Go Swag**: Para documentação automática da API. 
 - **Docker**: Para containerização e ambiente de desenvolvimento.
 - **Direnv**: Para gerenciamento de variáveis de ambiente.
 - **Air**: Para hot reload durante o desenvolvimento.
