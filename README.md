@@ -21,6 +21,7 @@ Este projeto irá abranger uma ampla gama de conceitos e melhores práticas de b
 - **CI/CD**: Automação de integração e entrega contínua.
 - **Controle de Concorrência Otimista (OCC)**: Para gerenciar conflitos de atualização.
 - **Abstração de Banco de Dados**: Uso de interfaces para abstração e flexibilidade no armazenamento de dados.
+- **SAGA Pattern**: Padrão de transações compensatórias para desfazer etapas que falharam
 - **Deploy em Produção**: Deploy automatizado via containers, compatível com qualquer ambiente de nuvem.
 
 ## Tecnologias Utilizadas

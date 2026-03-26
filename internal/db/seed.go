@@ -177,11 +177,12 @@ func generateUsers(num int) []*store.User {
 	users := make([]*store.User, num)
 
 	for i := range num {
-		users[i] = &store.User{
+		user := &store.User{
 			Username: usernames[i%len(usernames)] + fmt.Sprintf("%d", i),
 			Email:    usernames[i%len(usernames)] + fmt.Sprintf("%d@example.com", i),
-			Password: "123",
 		}
+		_ = user.Password.Set("123")
+		users[i] = user
 	}
 
 	return users
