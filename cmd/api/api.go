@@ -26,6 +26,7 @@ type config struct {
 	env    string
 	db     dbConfig
 	apiURL string
+	mail mailConfig
 }
 
 type dbConfig struct {
@@ -33,6 +34,10 @@ type dbConfig struct {
 	maxIdleConns int
 	addr         string
 	maxIdleTime  string
+}
+
+type mailConfig struct {
+	exp time.Duration
 }
 
 func (app *application) run(mux http.Handler) error {

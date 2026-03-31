@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"database/sql"
 	"fmt"
 	"log"
 	"math/rand"
@@ -146,9 +147,11 @@ var comments = []string{
 func Seed(store store.Storage) {
 	ctx := context.Background()
 
+	tx := &sql.Tx{}
+
 	users := generateUsers(100)
 	for _, user := range users {
-		if err := store.Users.Create(ctx, user); err != nil {
+		if err := store.Users.Create(ctx, tx, user); err != nil {
 			log.Println("error creating user:", err)
 			return
 		}
