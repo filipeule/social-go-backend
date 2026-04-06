@@ -144,18 +144,21 @@ var comments = []string{
 	"Nice overview! Looking forward to more content like this.",
 }
 
-func Seed(store store.Storage) {
+func Seed(store store.Storage, db *sql.DB) {
 	ctx := context.Background()
 
-	tx := &sql.Tx{}
+	tx, _ := db.BeginTx(ctx, nil)
 
 	users := generateUsers(100)
 	for _, user := range users {
 		if err := store.Users.Create(ctx, tx, user); err != nil {
+			_ = tx.Rollback()
 			log.Println("error creating user:", err)
 			return
 		}
 	}
+
+	tx.Commit()
 
 	posts := generatePosts(200, users)
 	for _, post := range posts {
