@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"social/internal/mailer"
 	"social/internal/store"
 	"time"
 
@@ -19,14 +20,16 @@ type application struct {
 	config config
 	store  store.Storage
 	logger *zap.SugaredLogger
+	mailer mailer.Client
 }
 
 type config struct {
-	addr   string
-	env    string
-	db     dbConfig
-	apiURL string
-	mail   mailConfig
+	addr        string
+	env         string
+	db          dbConfig
+	apiURL      string
+	mail        mailConfig
+	frontendURL string
 }
 
 type dbConfig struct {
@@ -37,7 +40,13 @@ type dbConfig struct {
 }
 
 type mailConfig struct {
-	exp time.Duration
+	exp       time.Duration
+	fromEmail string
+	sendGrid  sendGridConfig
+}
+
+type sendGridConfig struct {
+	apiKey string
 }
 
 func (app *application) run(mux http.Handler) error {
