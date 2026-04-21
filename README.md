@@ -11,7 +11,8 @@ Este projeto irá abranger uma ampla gama de conceitos e melhores práticas de b
 - **Paginação**: Implementação de paginação, filtros e ordenação para listas de posts e comentários.
 - **Documentação**: Documentação automática completa da API.
 - **Logging Estruturado**: Sistema de logging estruturado para monitoramento e debugging.
-- **Autenticação e Autorização**: Sistema seguro de login e controle de acesso.
+- **Autenticação**: Autenticação via JWT e Basic Auth
+- **Autorização**: Controle de acesso com permissões em roles.
 - **Caching**: Implementação de cache para melhorar performance.
 - **Testes**: Conjunto abrangente de testes automatizados.
 - **Graceful Shutdown**: Encerramento seguro do servidor.
