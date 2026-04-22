@@ -12,8 +12,8 @@ Este projeto irá abranger uma ampla gama de conceitos e melhores práticas de b
 - **Documentação**: Documentação automática completa da API.
 - **Logging Estruturado**: Sistema de logging estruturado para monitoramento e debugging.
 - **Autenticação**: Autenticação via JWT e Basic Auth
-- **Autorização**: Controle de acesso com permissões em roles.
-- **Caching**: Implementação de cache para melhorar performance.
+- **Autorização**: Controle de acesso com permissões em roles precedence.
+- **Caching**: Implementação de cache com Redis para melhorar performance.
 - **Testes**: Conjunto abrangente de testes automatizados.
 - **Graceful Shutdown**: Encerramento seguro do servidor.
 - **Rate Limiting**: Limitação de requests para controlar o tráfego.
@@ -29,6 +29,7 @@ Este projeto irá abranger uma ampla gama de conceitos e melhores práticas de b
 
 - **Go**: Linguagem principal para o backend.
 - **PostgreSQL**: Banco de dados relacional com migrações.
+- **Redis**: Banco de dados in memory para caching.
 - **Go Migrate**: Para executar migrações de banco de dados.
 - **Go Swag**: Para documentação automática da API. 
 - **Docker**: Para containerização e ambiente de desenvolvimento.
