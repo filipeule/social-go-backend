@@ -14,7 +14,7 @@ Este projeto irá abranger uma ampla gama de conceitos e melhores práticas de b
 - **Autenticação**: Autenticação via JWT e Basic Auth
 - **Autorização**: Controle de acesso com permissões em roles precedence.
 - **Caching**: Implementação de cache com Redis para melhorar performance.
-- **Testes**: Conjunto abrangente de testes automatizados.
+- **Testes**: Conjunto de testes automatizados, com mocks e spies.
 - **Graceful Shutdown**: Encerramento seguro do servidor.
 - **Rate Limiting**: Limitação de requests para controlar o tráfego.
 - **CORS**: Configuração de Cross-Origin Resource Sharing.
