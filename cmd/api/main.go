@@ -11,6 +11,7 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 const version = "0.0.2"
@@ -71,7 +72,7 @@ func main() {
 	}
 
 	// logger
-	logger := zap.Must(zap.NewProduction()).Sugar()
+	logger := zap.Must(zap.NewProduction(zap.AddStacktrace(zapcore.FatalLevel))).Sugar()
 	defer logger.Sync()
 
 	// database
